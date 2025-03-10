@@ -41,7 +41,7 @@ class AutoLabelAction
             return Str::startsWith($item['object']::class, 'Modules\\');
             // return Str::startsWith($item['class'],'Modules\\');
         });
-        if (is_array($class)) {
+        if (is_array($class) && isset($class['object'])) {
             $object_class = $class['object']::class;
 
             // Assert::string($class = Arr::get($backtrace, '5.class'));

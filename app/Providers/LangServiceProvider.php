@@ -24,7 +24,7 @@ use Modules\Xot\Services\BladeService;
 use Webmozart\Assert\Assert;
 
 /**
- * Undocumented class.
+ * ---.
  */
 class LangServiceProvider extends XotBaseServiceProvider
 {
@@ -100,6 +100,7 @@ class LangServiceProvider extends XotBaseServiceProvider
         });
         Action::configureUsing(function (Action $component) {
             $component = app(AutoLabelAction::class)->execute($component);
+            // $component->tooltip('preso');
 
             // $component->iconButton();
             // ->translateLabel()

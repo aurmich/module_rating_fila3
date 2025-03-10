@@ -21,7 +21,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 // Route::get('{path}', RedirectToPreferredLanguage::class)
 // ->where('path', '^(?!(en|de)).*');
 
-class Change extends Component
+class Switcher extends Component
 {
     public string $lang;
 
