@@ -1,13 +1,10 @@
 ---
-title: Modulo Xot
-description: Modulo Xot
+title: About Rating
+description: About Rating
 extends: _layouts.documentation
 section: content
 ---
 
-# Modulo Xot {#modulo-x-markot}
+# module_rating
 
-Modulo principale con cui si può utilizzare la struttura multitenant del progetto.
-Senza di esso tutta l'organizzazione della struttura della base su cui si lavora non può funzionare.
-
-E' la libreria di estensione di tutte le altre librerie.
+Il modulo Rating è il modulo che si occupa di gestire le valutazioni delle altri modelli utilizzati nel progetto.
