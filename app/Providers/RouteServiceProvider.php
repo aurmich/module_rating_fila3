@@ -58,7 +58,6 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
     public function register(): void
     {
         parent::register();
-        // $this->registerLang();
     }
 
     /**
@@ -68,31 +67,25 @@ class RouteServiceProvider extends XotBaseRouteServiceProvider
      */
     public function registerLang(): void
     {
-        /** @var array<string, array<string, string|null $locales */
+        /** @var array<string, array<string, string|null>> $locales */
         $locales = config('laravellocalization.supportedLocales');
         
-        if (! \is_array($locales)) {
+        if (! is_array($locales)) {
             $locales = ['it' => ['name' => 'it'], 'en' => ['name' => 'en']];
         }
         
         /** @var array<string> $langs */
         $langs = array_keys($locales);
 
-        /*
-        if (! \is_array($langs)) {
-            throw new \Exception('[.__LINE__.]['.class_basename(self::class).']');
-        }
-        \getRouteParameters();
-        */
         $n = 1;
         if (inAdmin()) {
             $n = 3;
         }
 
-        if (\in_array(request()->segment($n), $langs, false)) {
+        if (in_array(request()->segment($n), $langs, false)) {
             /** @var string|null $lang */
             $lang = request()->segment($n);
-            if (null !== $lang) {
+            if ($lang !== null) {
                 app()->setLocale($lang);
             }
         }

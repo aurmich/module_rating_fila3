@@ -221,12 +221,12 @@ class Post extends Model
             $postType = isset($this->attributes['post_type']) && is_string($this->attributes['post_type']) 
                 ? $this->attributes['post_type'] : '';
             $postId = isset($this->attributes['post_id']) && is_scalar($this->attributes['post_id']) 
-                ? (string)$this->attributes['post_id'] : '';
+                ? is_string($this) ? $this : (string) $this->attributes['post_id'] : '';
             $value = $postType . ' ' . $postId;
         } else {
             // Assicuriamoci che post_type e post_id siano stringhe
             $postType = is_string($this->post_type) ? $this->post_type : '';
-            $postId = is_scalar($this->post_id) ? (string)$this->post_id : '';
+            $postId = is_scalar($this->post_id) ? is_string($this) ? $this : (string) $this->post_id : '';
             $value = $postType . ' ' . $postId;
         }
 
@@ -251,7 +251,7 @@ class Post extends Model
             $postType = isset($this->attributes['post_type']) && is_string($this->attributes['post_type']) 
                 ? $this->attributes['post_type'] : '';
             $postId = isset($this->attributes['post_id']) && is_scalar($this->attributes['post_id']) 
-                ? (string)$this->attributes['post_id'] : '';
+                ? is_string($this) ? $this : (string) $this->attributes['post_id'] : '';
             $value = $postType . ' ' . $postId;
         }
         if (null === $value) {
