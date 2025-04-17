@@ -1,38 +1,61 @@
 {
-    "name": "fixcity/user-module",
-    "description": "Modulo User per FixCity",
-    "type": "laravel-module",
-    "require": {
-        "php": "^8.1",
-        "laravel/framework": "^10.0",
-        "spatie/laravel-permission": "^5.0",
-        "laravel/sanctum": "^3.0",
-        "thecodingmachine/safe": "^2.0"
-    },
-    "require-dev": {
-        "phpstan/phpstan": "^2.1",
-        "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
-        "phpstan/phpstan-strict-rules": "^1.0",
-        "thecodingmachine/phpstan-safe-rule": "^1.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Modules\\User\\": "laravel/Modules/User/app/"
-        },
-        "files": [
-            "laravel/Modules/User/app/helpers.php"
-        ]
-    },
+    "name": "laraxot/module_rating_fila3",
+    "description": "",
+    "authors": [{
+        "name": "Marco Sottana",
+        "email": "marco.sottana@gmail.com"
+    }],
     "extra": {
         "laravel": {
             "providers": [
-                "Modules\\User\\Providers\\UserServiceProvider"
-            ]
+                "Modules\\Rating\\Providers\\RatingServiceProvider",
+                "Modules\\Rating\\Providers\\Filament\\AdminPanelProvider"
+            ],
+            "aliases": {
+
+            }
         }
     },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Rating\\": "app/",
+            "Modules\\Rating\\Database\\Factories\\": "database/factories/",
+            "Modules\\Rating\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "require_comment": {
+        "calebporzio/sushi": "^2.4",
+        "illuminate/contracts": "^9.0|^10.0|^11.0",
+        "illuminate/support": "^9.12|^10.0|^11.0",
+        "kalnoy/nestedset": "^6.0",
+        "laraxot/module_xot": "dev-master",
+        "laraxot/module_lang": "dev-master",
+        "livewire/livewire": "^2.10",
+        "phpdocumentor/type-resolver": "^1.5",
+        "spatie/laravel-package-tools": "^1.11.3",
+        "spatie/laravel-sluggable": "^3.4",
+        "spatie/laravel-translatable": "^6.1"
+    },
+    "require-dev_comment": {
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "@php vendor/bin/testbench package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate"
+        ],
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "./vendor/bin/pest --no-coverage",
+        "test-coverage": "vendor/bin/pest --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "pestphp/pest-plugin": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
