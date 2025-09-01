@@ -16,28 +16,20 @@ class RatingTest extends TestCase
     public function test_can_create_rating(): void
     {
         $rating = Rating::create([
-            'title' => 'Test Rating',
-            'value' => 5,
+            'name' => 'Test Rating',
             'color' => '#FF0000',
-            'icon' => 'star',
-            'rule' => RuleEnum::ARTICLE->value,
-            'txt' => 'Test description',
-            'is_disabled' => false,
-            'is_readonly' => false,
-            'extra_attributes' => ['type' => 'test']
         ]);
 
         $this->assertDatabaseHas('ratings', [
             'id' => $rating->id,
-            'title' => 'Test Rating'
+            'name' => 'Test Rating'
         ]);
     }
 
     public function test_can_create_rating_morph(): void
     {
         $rating = Rating::create([
-            'title' => 'Test Rating',
-            'value' => 5
+            'name' => 'Test Rating',
         ]);
 
         $ratingMorph = RatingMorph::create([

@@ -33,6 +33,8 @@ trait HasRating
         $pivot = app($pivot_class);
         $pivot_table = $pivot->getTable();
         $pivot_db_name = $pivot->getConnection()->getDatabaseName();
+        // Rimuovi il percorso del file dal nome del database per SQLite
+        $pivot_db_name = 'main';
         $pivot_table_full = $pivot_db_name.'.'.$pivot_table;
         // Filtriamo i campi per escludere quelli che potrebbero non esistere nella tabella base
         $pivot_fields = array_filter($pivot->getFillable(), function($field) {
