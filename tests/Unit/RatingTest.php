@@ -5,13 +5,11 @@ namespace Modules\Rating\Tests\Unit;
 use Modules\Rating\Tests\TestCase;
 use Modules\Rating\Models\Rating;
 use Modules\Rating\Models\RatingMorph;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Modules\Rating\Enums\SupportedLocale;
 use Modules\Rating\Enums\RuleEnum;
 
 class RatingTest extends TestCase
 {
-    use RefreshDatabase;
 
     public function test_can_create_rating(): void
     {

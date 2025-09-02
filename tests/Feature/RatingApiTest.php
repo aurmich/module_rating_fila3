@@ -5,12 +5,10 @@ namespace Modules\Rating\Tests\Feature;
 use Modules\Rating\Tests\TestCase;
 use Modules\Rating\Models\Rating;
 use Modules\Rating\Models\RatingMorph;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 
 class RatingApiTest extends TestCase
 {
-    use RefreshDatabase, WithFaker;
 
     public function test_can_list_ratings(): void
     {
