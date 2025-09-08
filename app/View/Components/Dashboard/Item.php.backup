@@ -13,11 +13,7 @@ use Illuminate\View\Component;
  */
 class Item extends Component
 {
-<<<<<<< HEAD
     public function render(): string
-=======
-    public function render()
->>>>>>> 67a33bc (.)
     {
         return '';
     }
