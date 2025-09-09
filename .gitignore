@@ -40,11 +40,8 @@ cache/
 
 # Backup files
 *.bak
-<<<<<<< HEAD
 *.backup
 *.backup.*
-=======
->>>>>>> 67a33bc (.)
 
 # PHPStan documentation
 docs/phpstan/
