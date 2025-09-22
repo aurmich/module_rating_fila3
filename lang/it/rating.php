@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0519a60 (.)
 return array (
   'resource' => 
   array (
@@ -27,8 +30,11 @@ return array (
       ),
     ),
     'sort' => 33,
+<<<<<<< HEAD
     'icon' => 'rating.navigation',
     'label' => 'rating.navigation',
+=======
+>>>>>>> 0519a60 (.)
   ),
   'fields' => 
   array (
@@ -239,6 +245,7 @@ return array (
     ),
   ),
 );
+<<<<<<< HEAD
 =======
 return  [
   'resource' => 
@@ -479,3 +486,5 @@ return  [
   ],
 ];
 >>>>>>> aaced3e (.)
+=======
+>>>>>>> 0519a60 (.)

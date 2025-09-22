@@ -25,10 +25,14 @@ trait HasLikes
     public function likedBy($user): void
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         $this->likesRelation()->create(['user_id' => $user->id]);
 =======
         $this->likesRelation()->create(['user_id' => $user?->id]);
 >>>>>>> aaced3e (.)
+=======
+        $this->likesRelation()->create(['user_id' => $user->id]);
+>>>>>>> 0519a60 (.)
 
         $this->unsetRelation('likesRelation');
     }
@@ -44,10 +48,14 @@ trait HasLikes
          * @var Like
          */
 <<<<<<< HEAD
+<<<<<<< HEAD
         $where = $this->likesRelation()->where('user_id', $user->id)->first();
 =======
         $where = $this->likesRelation()->where('user_id', $user?->id)->first();
 >>>>>>> aaced3e (.)
+=======
+        $where = $this->likesRelation()->where('user_id', $user->id)->first();
+>>>>>>> 0519a60 (.)
         if ($where !== null) {
             $where->delete();
         }
@@ -75,10 +83,14 @@ trait HasLikes
     public function isLikedBy($user)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         return $this->likesRelation()->where('user_id', $user->id)->exists();
 =======
         return $this->likesRelation()->where('user_id', $user?->id)->exists();
 >>>>>>> aaced3e (.)
+=======
+        return $this->likesRelation()->where('user_id', $user->id)->exists();
+>>>>>>> 0519a60 (.)
     }
 
     /**

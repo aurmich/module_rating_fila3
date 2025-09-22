@@ -1,6 +1,9 @@
 <?php
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0519a60 (.)
 return array (
   'pages' => 'Pagine',
   'widgets' => 'Widget',
@@ -80,6 +83,7 @@ return array (
     ),
     'export' => 
     array (
+<<<<<<< HEAD
 =======
 return  [
   'pages' => 'Pagine',
@@ -161,11 +165,16 @@ return  [
     'export' => 
      [
 >>>>>>> aaced3e (.)
+=======
+>>>>>>> 0519a60 (.)
       'label' => 'Esporta',
       'description' => 'Esporta i dati in un file',
       'filename_prefix' => 'Aree al',
       'columns' => 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0519a60 (.)
       array (
         'name' => 
         array (
@@ -214,6 +223,7 @@ return  [
     ),
   ),
 );
+<<<<<<< HEAD
 =======
        [
         'name' => 
@@ -264,3 +274,5 @@ return  [
   ],
 ];
 >>>>>>> aaced3e (.)
+=======
+>>>>>>> 0519a60 (.)

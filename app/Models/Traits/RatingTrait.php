@@ -86,10 +86,14 @@ trait RatingTrait
      * @return \Illuminate\Support\Collection
      */
 <<<<<<< HEAD
+<<<<<<< HEAD
     public function getMyRatingAttribute($value)
 =======
     public function getMyRatingAttribute($_value)
 >>>>>>> aaced3e (.)
+=======
+    public function getMyRatingAttribute($value)
+>>>>>>> 0519a60 (.)
     {
         $my = $this->myRatings;
 

@@ -36,13 +36,19 @@ trait HasRating
         $pivot_table_full = $pivot_table;
         
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0519a60 (.)
         $pivot_fields = array_filter($pivot->getFillable(), function($field) {
            
             return !in_array($field, ['sum_credit_yes', 'sum_credit_no', 'count_credit_yes', 'count_credit_no', 'percentage']);
         });
+<<<<<<< HEAD
 =======
         $pivot_fields = array_filter($pivot->getFillable(), fn($field) => !in_array($field, ['sum_credit_yes', 'sum_credit_no', 'count_credit_yes', 'count_credit_no', 'percentage']));
 >>>>>>> aaced3e (.)
+=======
+>>>>>>> 0519a60 (.)
 
         return $this->morphToMany(Rating::class, 'model', $pivot_table_full)
             ->using($pivot_class)

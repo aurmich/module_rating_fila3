@@ -21,9 +21,12 @@ class ListRatings extends XotBaseListRecords
     protected static string $resource = RatingResource::class;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     #[\Override]
 >>>>>>> aaced3e (.)
+=======
+>>>>>>> 0519a60 (.)
     public function getTableColumns(): array
     {
         return [
